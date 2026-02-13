@@ -1,0 +1,163 @@
+:root {
+    --primary-color: #00aaff; /* A bright, futuristic blue */
+    --secondary-color: #007bff; /* A slightly darker blue */
+    --background-dark: #0f2027; /* Very dark background */
+    --background-gradient-start: #2c5364;
+    --background-gradient-mid: #203a43;
+    --background-gradient-end: #0f2027;
+    --card-bg: #0a141a; /* Darker background for cards */
+    --text-light: #e0e0e0;
+    --text-muted: #888;
+    --border-color: #00aaff;
+    --glow-color: #00aaff;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: var(--background-dark);
+    background: -webkit-linear-gradient(to right, var(--background-gradient-start), var(--background-gradient-mid), var(--background-gradient-end));
+    background: linear-gradient(to right, var(--background-gradient-start), var(--background-gradient-mid), var(--background-gradient-end));
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.card {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 0 10px var(--glow-color) !important;
+    animation: glow 1.5s infinite alternate !important;
+    color: var(--text-light) !important;
+}
+
+.card-title {
+    color: var(--primary-color) !important;
+}
+
+.form-control, .form-select, .form-control:focus, .form-select:focus {
+    background-color: #1a1a1a !important;
+    color: var(--text-light) !important;
+    border: 1px solid var(--primary-color) !important;
+    box-shadow: 0 0 5px var(--glow-color) !important;
+    transition: all var(--transition-speed) ease-in-out;
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    transition: all var(--transition-speed) ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 0 15px var(--glow-color) !important;
+}
+
+.btn-warning { /* Edit button */
+    background-color: #ffc107 !important; /* Bootstrap yellow */
+    border-color: #ffc107 !important;
+    color: #333 !important;
+}
+.btn-danger { /* Delete button */
+    background-color: #dc3545 !important; /* Bootstrap red */
+    border-color: #dc3545 !important;
+}
+.btn-info { /* Add history button */
+    background-color: #17a2b8 !important; /* Bootstrap cyan */
+    border-color: #17a2b8 !important;
+    color: #fff !important;
+}
+
+.nav-link {
+    color: var(--primary-color) !important;
+    transition: all var(--transition-speed) ease-in-out;
+}
+
+.nav-link.active {
+    color: #fff !important;
+    background-color: var(--primary-color) !important;
+    border-radius: 5px;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.modal-content {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--primary-color) !important;
+    box-shadow: 0 0 10px var(--glow-color) !important;
+    color: var(--text-light) !important;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--primary-color) !important;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--primary-color) !important;
+}
+
+.patient-item, .card {
+    transition: all 0.3s ease-in-out;
+}
+
+.patient-item:hover, .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--glow-color), 0 0 30px var(--glow-color) !important;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px var(--glow-color); }
+    50% { box-shadow: 0 0 15px var(--glow-color), 0 0 25px var(--glow-color); }
+    100% { box-shadow: 0 0 5px var(--glow-color); }
+}
+
+/* Specific styles for lists inside cards */
+.list-group-item {
+    background-color: transparent !important;
+    border-color: rgba(0, 170, 255, 0.2) !important;
+    color: var(--text-light) !important;
+}
+
+/* Adjust text muted for better visibility on dark background */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Adjust font size for better readability */
+body {
+    font-size: 0.95rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-size: calc(1.275rem + 0.3vw);
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.form-label {
+    font-size: 0.9rem;
+}
+
+.btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+}
